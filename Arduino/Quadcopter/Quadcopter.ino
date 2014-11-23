@@ -16,8 +16,6 @@ void setup() {
   lcd.begin(20, 4);
   lcd.clear();
   lcd.home();
-  
-  pinMode(13, OUTPUT); 
   // Attach ports to the motor outputs.
   fl.attach(44);
   fr.attach(45);
