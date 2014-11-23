@@ -2,6 +2,9 @@
 #include "geometry.h"
 #include "sensor.h"
 
+/*
+  This class provides communication to the ADXL345 i2c accelerometer returned as a vector.
+ */
 class Accelerometer: Sensor<geometry::Vector> {
   public:
     Accelerometer(char i2c_address);

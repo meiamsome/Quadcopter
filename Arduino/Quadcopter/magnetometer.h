@@ -2,6 +2,9 @@
 #include "geometry.h"
 #include "sensor.h"
 
+/*
+  This class provides communication to the HMC5883L i2c magnetometer returned as a vector.
+ */
 class Magnetometer: public Sensor<geometry::Vector> {
   public:
     Magnetometer(char i2c_address);

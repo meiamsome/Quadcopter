@@ -2,6 +2,9 @@
 #define GEOMETRY
 
 namespace geometry {
+  /*
+    Represents a vector in R3.
+   */
   class Vector {
     public:
       Vector(double x, double y, double z);
@@ -21,6 +24,9 @@ namespace geometry {
       double x, y, z;
   };
   
+  /*
+    Quarternion Rotation.
+   */
   class Rotation {
     public:
       Rotation(Vector axis, double angle);

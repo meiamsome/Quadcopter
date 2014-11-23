@@ -2,6 +2,11 @@
 #include "geometry.h"
 #include "sensor.h"
 
+
+/*
+  This class provides communication to the L3G4200D i2c gyroscope returned as a vector.
+  TODO: change this to be in geometry::Rotation
+ */
 class Gyroscope: Sensor<geometry::Vector> {
   public:
     Accelerometer(char i2c_address);
