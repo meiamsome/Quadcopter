@@ -5,6 +5,7 @@
 #include "geometry.h"
 #include "magnetometer.h"
 #include "accelerometer.h"
+#include "gyroscope.h"
 Servo fl, fr, bl, br;
 LiquidCrystal_I2C lcd(0x3F, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
 Magnetometer mag(0x1E);
