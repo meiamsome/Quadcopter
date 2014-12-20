@@ -20,14 +20,14 @@ while True:
         plt.clf()
         if len(t_data) >= 50:
             moving_avg = [sum([x_data[x] for x in xrange(y-2, y+3)])/5 for y in xrange(-48, -2)]
-    	    plt.plot([t_data[x] for x in xrange(-48, -2)], moving_avg, color='b')
+            plt.plot([t_data[x] for x in xrange(-48, -2)], moving_avg, color='b')
             moving_avg = [sum([y_data[x] for x in xrange(y-2, y+3)])/5 for y in xrange(-48, -2)]
-    	    plt.plot([t_data[x] for x in xrange(-48, -2)], moving_avg, color='g')
+            plt.plot([t_data[x] for x in xrange(-48, -2)], moving_avg, color='g')
             moving_avg = [sum([z_data[x] for x in xrange(y-2, y+3)])/5 for y in xrange(-48, -2)]
-    	    plt.plot([t_data[x] for x in xrange(-48, -2)], moving_avg, color='r')
-    	plt.scatter(t_data[-50:], x_data[-50:], color='b')
-    	plt.scatter(t_data[-50:], y_data[-50:], color='g')
-    	plt.scatter(t_data[-50:], z_data[-50:], color='r')
+            plt.plot([t_data[x] for x in xrange(-48, -2)], moving_avg, color='r')
+        plt.scatter(t_data[-50:], x_data[-50:], color='b')
+        plt.scatter(t_data[-50:], y_data[-50:], color='g')
+        plt.scatter(t_data[-50:], z_data[-50:], color='r')
         plt.ylim(-2, 2)
         plt.draw()
         t_data = t_data[-50:]
