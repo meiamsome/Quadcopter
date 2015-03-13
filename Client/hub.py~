@@ -28,7 +28,7 @@ while True:
         plt.scatter(t_data[-50:], x_data[-50:], color='b')
         plt.scatter(t_data[-50:], y_data[-50:], color='g')
         plt.scatter(t_data[-50:], z_data[-50:], color='r')
-        plt.ylim(-180, 180)
+        plt.ylim(-2, 2)
         plt.draw()
         t_data = t_data[-50:]
         x_data = x_data[-50:]
@@ -38,13 +38,12 @@ while True:
     try:
         typ, remainder = line.split(":")
     except:
-        print("Could not decode line \"%s\"" % line)
+        print("Could not decode line %s" % line)
         continue
     if typ != "0":
-        print(line)
         continue
     data = remainder.split()
     t_data.append(int(data[0]))
-    x_data.append(float(data[1]))
-    y_data.append(float(data[2]))
-    z_data.append(float(data[3]))
+    x_data.append(float(data[2]))
+    y_data.append(float(data[3]))
+    z_data.append(float(data[4]))

@@ -1,0 +1,10 @@
+import serial
+from socket import *
+
+sock = socket(AF_INET, SOCK_DGRAM)
+sock.bind(('<broadcast>', 0))
+sock.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
+ser = serial.Serial("/dev/ttyUSB0", 19200, timeout = 1)
+while True:
+    line = ser.readline()
+    sock.sendto(line[:-1], ('<broadcast>', 7823))
